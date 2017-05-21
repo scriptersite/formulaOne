@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="legend">
+        <h3>Season {{season}}</h3>
+        <div>
+            <img src="assets/winner.png" style="width: 50px" alt="">
+            <span>  Season Champion</span>
+            <img src="assets/goldMedal.png" style="width: 35px" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="raceResultNode [ col-xs-12 col-sm-12 col-md-6 ]" ng-repeat="race in races">
+            <div class="driverInfo">
+                <img ng-src="{{checkIfSeasonWinner(seasonWinner.familyName,race.Results[0].Driver.familyName) ? 'assets/winner.png' : 'assets/noWinner.png'}}"
+                     alt="">
+            </div>
+            <div class="raceInfo">
+                <div class="raceSubInfo ">
+                    <span class="raceSubInfoDriver"> {{race.Results[0].Driver.givenName}} {{race.Results[0].Driver.familyName}}</span>
+                </div>
+                <div class="raceSubInfo">
+                    <span style="font-weight: bold">{{race.Results[0].Constructor.name}}</span>
+                    <span>{{race.raceName}}</span>
+                    <span>{{race.Circuit.circuitName}}</span>
+                    <span>{{race.date}}</span>
+                </div>
+                <div ng-if="checkIfSeasonWinner(seasonWinner.familyName,race.Results[0].Driver.familyName)">
+                    <img class="goldMedal" src="assets/goldMedal.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

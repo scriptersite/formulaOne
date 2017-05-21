@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+* {
+    font-family: 'Cuprum', 'FontAwesome' !important;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-around;
+}
+
+.navbar {
+    font-size: 18px;
+}
+
+.winnerClass {
+    background-color: aquamarine;
+}
+
+.nonWinnerClass {
+    background-color: antiquewhite;
+}
+
+.logoTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.fa {
+    padding-right: 5px;
+}
+
+.navbar-nav {
+    margin-top: 25px;
+}
+
+.thumbnails {
+    list-style-type: none;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.thumbnail {
+    border-style: none;
+}
+
+.seasonYear {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    margin-top: -90px;
+    margin-left: 9px;
+
+}
+
+.raceResultNode {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.driverInfo {
+    align-self: center;
+    position: relative;
+}
+
+.driverInfo > img {
+    width: 100px;
+}
+
+.driverName {
+    color: white;
+}
+
+.raceInfo {
+    display: flex;
+    flex: 1;
+    background-color: lightgray;
+    justify-content: space-between;
+    padding-left: 100px;
+    margin-left: -90px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border-radius: 26px;
+}
+
+.raceSubInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding-right: 25px;
+}
+
+.raceSubInfo > .raceSubInfoDriver {
+    font-size: 25px;
+    font-family: 'Cuprum' !important;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.legend {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#main {
+    margin-bottom: 25px;
+}
+
+Footer {
+    background-color: lightgrey;
+    text-align: center;
+    padding: 5px 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.thumbnail {
+    background-color: transparent;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.thumbnail:hover, .thumbnail:focus, .thumbnail:active {
+    -webkit-transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.goldMedal {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 25px;
+    top: 3px;
+}
+

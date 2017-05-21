@@ -1,0 +1,30 @@
+<div class="text-center">
+    <div class="container">
+        <div class="seasonRangeContainer">
+            <h2>F1 World Championship Seasons</h2>
+            <form class="form-horizontal" role="form">
+                <div class="form-group row">
+                    <div class="col-md-2 col-md-offset-4">
+                        <label for="inputfrom" class=" control-label">From</label>
+                        <input ng-model="seasonFrom" type="number" class="form-control" id="inputfrom"
+                               placeholder="Year">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inputto" class=" control-label">To</label>
+                        <input ng-model="seasonTo" type="number" class="form-control" id="inputto" placeholder="Year">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <ul class="thumbnails">
+                <li class="col-md-3" ng-repeat="season in seasons | filter: seasonsRange('season')">
+                    <div class="thumbnail">
+                        <img src="assets/thumb.png" alt="ALT NAME" ng-click="goFetchSeason(season.season)">
+                        <span class="seasonYear">{{season.season}}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
